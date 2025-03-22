@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Out Patient Discharge Summary </title>
+        <link href="assets/css/style.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="icon" type="image/png" href="assets/images/fve.png">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+       
+            @media print {
+                #print-button {
+                    display: none;
+                }
+               img{
+                   width:50%;
+                   height:auto;
+                   margin-bottom:10px;
+               }
+               .billing-details{
+                   font-size:20px !important;
+                   
+               }
+                 .billing-details th,td{
+                    padding:12px !important;
+                    
+                }
+                .details{
+                    
+                }
+              
+               
+            }
+            </style>
+          </head>
+    <body> 
+ 
+        <div class="container-fluid">
+         <div class="">
+             <div class="row mt-3 ml-2">
+                 <a class="button btn btn-primary print-button" style="color:#fff;" id="print-button" onclick="window.print();"><i class="ion ion-ios-printer-outline fa fa-print"></i> Print Discharge</a>
+             </div>
+          <div class="col-12">
+                  <img src="assets/images/divine_logo.jpg">                 
+          </div>
+          
+          <div  class="row margin top bottom details">
+            
+            <p class="col-6">
+                Patient ID                    :                                                         
+                Patient Name              :  Mr. 
+                Age/Gender               :   /   
+                Consulting Doctor       : Dr. 
+            </p>
+            <div class="col-6 ">
+                     <p>                        
+                        Registration ID         : 
+                        
+                        Registration Date     : 
+                        
+                        Admission Date        : 
+                        
+                        Department              : General 
+                     </p>
+                  
+            </div>
+               
+
+          </div>
+              <div class="billing-details">
+                   <h5 class="text-center h5"> <B>OP Registration</B></h5>
+                               <table> 
+                                 
+                                 <tr>
+                                    <th><p></p></th>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><b>Review in days</b></td>
+                                    <td colspan="3"></span> </td>
+                                    <td colspan="3 "> </td>
+                                    <td colspan="3"> <b><span class="ml-4 mt-2 text-dot"></b></td>
+                                 </tr>
+                                <tr>
+                                    <th><p></p></th>
+                                </tr>
+                                <tr class="">
+                                    <th colspan="3"  class="h5"></th>
+                                </tr>
+                                 <tr class="mt-1">   
+                                     <th colspan="3"  class="mt-3 pt-2"> <b> S.no   </b> </th>
+                                     <th  colspan="3" class=""> <b> Description </b>  </th>
+                                     <th colspan="3" class=""> <b>Charges  </b></th>
+                                     <th colspan="3" class="">  <b> </b></th>
+                                 </tr>
+                                 <tr>
+                                    <th colspan="3"></th>
+                                 </tr>
+                                 <tr> 
+                                    <td colspan="3">1.</td>                                 
+                                    <td colspan="3">Registration Charges </td>
+                                    <td colspan="3"><p class="ml-4 mt-2"></p> </td>
+                                    <td colspan="3"> </td>
+                                 </tr>
+                                 <tr>
+                                    <th colspan="3"></th>
+                                 </tr>
+                                 <tr> 
+                                    <td colspan="3">2.</td>                                 
+                                    <td colspan="3"> Consulation Charges</td>
+                                    <td colspan="3" ><p class="ml-4 mt-2"></p> </td>
+                                    <td colspan="3"> </td>
+                                 </tr>
+                                 <tr>
+                                    <th colspan="3"></th>
+                                 </tr>
+                                 
+                                 <tr>
+                                    <th colspan="3"></th>
+                                 </tr>
+                                 <tr> 
+                                    <td colspan="3">3.</td>                                 
+                                    <td colspan="3">Total Charge </td>
+                                    <td colspan="3"><p class="ml-4 mt-2" id="number"><?php  echo $summary->total_fees_paid+$summary->discount_fees; ?></p> </td>
+                                    <td colspan="3"> </td>
+                                 </tr>
+                                 
+                                 <tr> 
+                                    <td colspan="3"></td>                                 
+                                    <td colspan="3">Discount Charge</td>
+                                    <td colspan="3"><p class="ml-4 mt-2"></p> </td>
+                                    <td colspan="3"> </td>
+                                 </tr>
+                                 
+                                 <tr> 
+                                    <td colspan="3"></td>                                 
+                                    <td colspan="3">Fees Paid</td>
+                                    <td colspan="3"><p class="ml-4 mt-2"></p> </td>
+                                    <td colspan="3"> </td>
+                                 </tr>
+                                 <tr>
+                                    <th colspan="3"></th>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="3">Total Amount in words</td>
+                                    <td colspan="3"> </td>
+                                    <td colspan="3 "><span class="ml-4 mt-2 text-dot" id="words"></span> </td>
+                                    <td colspan="3"> </td>
+                                 </tr>
+                                 
+                               </table>
+                              <p class="bottom"></p>
+                <footer class="d-flex justify-content-center"> Katta Subbarao Thota,Opposite St.Ann's College, Gavaravaram, Eluru, AP - 534006 
+                             Mob. No: 8341100755 Phone No : 08812 239999
+                </footer>
+              </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="assets/js/basic.js"></script>
+    
+    </body>
+</html>
